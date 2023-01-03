@@ -9,9 +9,29 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@date-io/date-fns": "^2.16.0",
+    "@date-io/moment": "^2.16.1",
     "@next/font": "13.0.7",
+    "@supabase/supabase-js": "^2.2.1",
+    "autoprefixer": "^10.4.13",
+    "axios": "^1.2.1",
+    "chart.js": "^4.1.1",
+    "compressorjs": "^1.1.1",
+    "date-fns": "^2.29.3",
+    "draft-js": "^0.11.7",
+    "draftjs-to-html": "^0.9.1",
+    "file-saver": "^2.0.5",
+    "framer-motion": "^7.10.2",
+    "html-to-draftjs": "^1.5.0",
+    "moment": "^2.29.4",
     "next": "13.0.7",
+    "postcss": "^8.4.20",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "react-draft-wysiwyg": "^1.15.0",
+    "react-jitsi": "^1.0.4",
+    "tailwindcss": "^3.2.4",
+    "web-vitals": "^3.1.0",
+    "xlsx": "^0.18.5"
   }
 }

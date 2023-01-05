@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-const HomeContext = createContext(null)
+const HomeContext = createContext()
 
 const HomeProvider = ({children}) => {
 

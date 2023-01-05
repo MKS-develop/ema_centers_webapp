@@ -6,7 +6,7 @@ import Main from './Views/Main'
 function Login() {
 
     return (
-		<Layout title={"Iniciar sesión"}>
+		<Layout title={"Iniciar sesión"} sidebarVisible={false}>
             <Main/>
         </Layout>
     )

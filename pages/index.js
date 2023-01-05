@@ -6,7 +6,7 @@ import Main from './Views/Main'
 function Home() {
 
   return (
-	  <Layout title={"Dashboard"}>
+	  <Layout title={"Dashboard"} titleInPage={"Dashboard"} sidebarVisible={true}>
       <HomeProvider>
         <Main/>
       </HomeProvider>

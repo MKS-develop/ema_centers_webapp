@@ -4,9 +4,8 @@ import useGlobal from '../lib/hooks/useGlobal';
 import { 
     FiLayout, 
     FiCalendar, 
-    FiBell, 
-    FiUsers, 
-    FiClipboard, 
+    FiUsers,
+    FiClipboard,
     FiSettings,
     FiLogOut
 } from 'react-icons/fi';
@@ -33,17 +32,17 @@ function Sidebar() {
             <img className="block h-full relative" src="../images/logo.png" alt="EMA"/>
         </Link>
         <div className="h-[72vh] w-full px-5 flex flex-col gap-2 justify-start items-start">
-            <LinkSidebar label="Resumen" icon="auto_awesome_mosaic" link="/">
+            <LinkSidebar label="Dashboard" icon="auto_awesome_mosaic" link="/">
                 <FiLayout size={iconSize}/>
             </LinkSidebar>
             <LinkSidebar label="Citas" icon="today" link="/dates">
-                <FiCalendar size={iconSize}/>
+                <FiClipboard size={iconSize}/>
             </LinkSidebar>
             <LinkSidebar label="Pacientes" icon="people" link="/patients">
-                <FiBell size={iconSize}/>
+                <FiUsers size={iconSize}/>
             </LinkSidebar>
             <LinkSidebar label="Agenda" icon="today" link="/agenda">
-                <FiUsers size={iconSize}/>
+                <FiCalendar size={iconSize}/>
             </LinkSidebar>
             <LinkSidebar label="Reportes" icon="bookmark" link="/treatments">
                 <FiClipboard size={iconSize}/>
@@ -54,7 +53,7 @@ function Sidebar() {
                 <FiSettings size={iconSize}/>
                 <span className="text-sm">Configuración</span>
             </Link>
-            <Link className="transition w-full flex justify-start items-center gap-4 bg-white text-slate-900 hover:bg-primary/80 hover:text-white rounded p-[10px_10px]" href="/configuration" >
+            <Link className="transition w-full flex justify-start items-center gap-4 bg-white text-slate-900 hover:bg-primary/80 hover:text-white rounded p-[10px_10px]" href="/login" >
                 <FiLogOut size={iconSize}/>
                 <span className="text-sm">Salir</span>
             </Link>

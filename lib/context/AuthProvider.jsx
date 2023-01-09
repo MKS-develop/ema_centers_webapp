@@ -3,6 +3,7 @@ const AuthContext = createContext()
 
 const AuthProvider = ({children}) => {
 
+    const userRole = 1
     const [userData, setUserData] = useState({
         email: "",
         password: ""
@@ -13,7 +14,8 @@ const AuthProvider = ({children}) => {
         <AuthContext.Provider value={{
             userData, 
             setUserData,
-            Login
+            Login,
+            userRole
         }}>
             {children}
         </AuthContext.Provider>

@@ -1,9 +1,17 @@
 import React from 'react'
-import Link from 'next/link'
+import useAuth from '../../lib/hooks/useAuth'
+import DoctorsCase from './DoctorsCase'
+import OperatorsCase from './OperatorsCase'
 
 function Main() {
+
+  const {userRole} = useAuth()
+
   return (
-    <div>Dashboard</div>
+    <div className='block relative w-full'>
+      {userRole === 1 && <DoctorsCase/>}
+      {userRole === 2 && <OperatorsCase/>}
+    </div>
   )
 }
 

@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import React from 'react'
 import EmptyStateList from '../../../components/EmptyStateList'
 
@@ -19,7 +20,12 @@ function Main() {
 
   const DataGrid = () => {
     return(
-      <div className="transition relative grid grid-cols-7 grid-rows-[1fr] gap-y-[10px] w-full border-b p-[1%_2.5%] cursor-pointer bg-white hover:bg-slate-200">
+      <Link
+        href={{
+          pathname: '/patients/patient',
+          query: {patient_id: "ACV32JH"}
+        }}
+        className="transition relative grid grid-cols-7 grid-rows-[1fr] gap-y-[10px] w-full border-b p-[1%_2.5%] cursor-pointer bg-white hover:bg-slate-200">
         <p className='data-grid-default-data'>Jose Hernandez</p>
         <p className='data-grid-default-data'>ACV32</p>
         <p className='data-grid-default-data'>12/12/2022</p>
@@ -30,7 +36,7 @@ function Main() {
           <span className='rounded-full w-[12px] h-[12px] bg-success'></span>
           <p className='text-sm font-medium text-slate-900'>Activo</p>
         </div>
-      </div>
+      </Link>
     )
   }
 

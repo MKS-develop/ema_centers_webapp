@@ -46,7 +46,7 @@ body {
         @apply text-base font-light text-slate-500 cursor-pointer
     }
     .navbar { 
-        @apply z-20 bg-white w-10/12 fixed flex justify-between items-center border-b top-0 right-0 h-[10vh] px-[2%]
+        @apply z-20 bg-white w-10/12 fixed flex justify-end items-center border-b top-0 right-0 h-[10vh] px-[2%]
     }
     .page-header { 
         @apply z-10 bg-white items-center justify-between flex px-[2%] border-b top-[10vh] right-0 fixed w-10/12 h-[8vh] max-h-[8vh]
@@ -58,7 +58,7 @@ body {
         @apply relative flex flex-col justify-start items-start w-[13%]
     }
     .input-label { 
-        @apply text-[13px] text-slate-900 font-medium mb-1
+        @apply text-[12px] text-slate-500 font-medium mb-1
     }
     .form-control { 
         @apply transition w-full border border-primary/20 p-[6px_12px] outline-none rounded text-sm bg-white focus:border-primary
@@ -68,5 +68,14 @@ body {
     }
     .data-grid-default-data{
         @apply text-base text-slate-900 font-light w-full overflow-hidden text-ellipsis
+    }
+    .data-text-default{
+        @apply font-bold text-sm text-slate-900
+    }
+    .eme-link-disabled{
+        @apply cursor-pointer p-[6%_8%] w-full h-fit text-slate-600 border-l-2 border-l-slate-300 font-light text-[0.8rem]
+    }
+    .eme-link-active{
+        @apply cursor-pointer p-[6%_8%] w-full h-fit text-primary border-l-4 border-l-secondary font-bold text-[0.8rem]
     }
 }

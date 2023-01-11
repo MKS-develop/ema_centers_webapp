@@ -17,7 +17,7 @@ function Index() {
                 <p className="title-page">Paciente</p>
               </div>
               <div className="w-auto flex justify-end items-center gap-2">
-                <Link href="/patients/patient/attention" className="btn btn-primary">Expediente médico</Link>
+                <Link href="/patients/patient/medical-record" className="btn btn-primary">Expediente médico</Link>
               </div>
             </div>
           </div>

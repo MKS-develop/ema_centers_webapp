@@ -27,7 +27,7 @@ function Sidebar() {
     }
 
   return (
-    <div className="w-2/12 px-0 border-r h-screen flex flex-col justify-between items-center fixed top-0 left-0">
+    <div className="w-2/12 px-0 border-r h-screen flex flex-col justify-between items-center fixed bg-white top-0 left-0">
         <Link className="h-[10vh] w-full flex justify-center items-center mr-0 p-[6%] border-b" href="/">
             <img className="block h-full relative" src="/images/logo.png" alt="EMA"/>
         </Link>

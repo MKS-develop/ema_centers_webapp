@@ -1,4 +1,6 @@
 import React from 'react'
+import Link from 'next/link'
+import useMedicalRecord from '../../../../../lib/hooks/useMedicalRecord'
 
 function History() {
 
@@ -7,10 +9,20 @@ function History() {
         {},
         {}
     ]
+    
+    const {
+        setTitle,
+        setPopupActive,
+        setPopupSectionActive
+    } = useMedicalRecord()
 
     const DateComponent = ({data}) => {
         return(
-            <div className="w-full h-[10vh] my-3 cursor-pointer bg-white shadow-md border border-slate-200 flex justify-start items-center gap-3 rounded-md p-[2%_2%] overflow-hidden">
+            <div onClick={()=>{
+                setTitle("Detalle de consulta"),
+                setPopupActive(true),
+                setPopupSectionActive(4)
+            }} className="w-full h-[10vh] my-3 cursor-pointer bg-white shadow-md border border-slate-200 flex justify-start items-center gap-3 rounded-md p-[2%_2%] overflow-hidden">
                 
                 <div className="flex flex-col justify-start items-start w-[30%]">
                     <p className='font-medium text-[1.1rem] text-primary'>{data["date"] ?? "03/01/2023" }</p>
@@ -35,7 +47,15 @@ function History() {
 
     return (
         <div className='flex flex-col items-start w-full h-full'>
-            <p className="w-full border-b text-left font-semibold text-lg text-slate-900 pb-2">Historial de consultas</p>
+            <div className="w-full flex justify-between items-center border-b pb-2">
+                <p className="font-semibold text-lg text-slate-900">Historial de consultas</p>
+                <p onClick={()=>{
+                    setTitle("Historial de consultas"),
+                    setPopupActive(true),
+                    setPopupSectionActive(0)
+
+                }} className="font-sm text-base text-slate-900 cursor-pointer">ver más</p>
+            </div>
             <div className="h-full w-full overflow-y-auto gap-3">
                 {listOfDates.length > 0 ? listOfDates.map((date, i)=> <DateComponent data={date} key={i}/>) : 
                     <div className='w-full h-full flex flex-col justify-center items-center text-center px-[15%]'>

@@ -1,4 +1,5 @@
 import React from 'react'
+import useMedicalRecord from '../../../../../lib/hooks/useMedicalRecord'
 
 function Treatments() {
 
@@ -7,6 +8,12 @@ function Treatments() {
         {},
         {}
     ]
+
+    const {
+        setTitle,
+        setPopupActive,
+        setPopupSectionActive
+    } = useMedicalRecord()
 
     const TreatmentComponent = ({data}) => {
         return(
@@ -35,7 +42,14 @@ function Treatments() {
 
     return (
         <div className='flex flex-col items-start w-full h-full'>
-            <p className="w-full border-b text-left font-semibold text-lg text-slate-900 pb-2">Tratamientos</p>
+            <div className="w-full flex justify-between items-center border-b pb-2">
+                <p className="font-semibold text-lg text-slate-900">Tratamientos</p>
+                <p onClick={()=>{
+                    setTitle("Tratamientos"),
+                    setPopupActive(true),
+                    setPopupSectionActive(1)
+                }} className="font-sm text-base text-slate-900 cursor-pointer">ver más</p>
+            </div>
             {listOfTreatments.length > 0 ? listOfTreatments.map((treatment, i)=> <TreatmentComponent data={treatment} key={i}/>) : 
                 <div className='w-full h-full flex flex-col justify-center items-center text-center px-[15%]'>
                     <p className='font-semibold text-lg text-primary'>No hay tratamientos</p>
